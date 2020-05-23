@@ -1,0 +1,24 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Address</th>
+            <th>Phone number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pd of service.list">
+            <td>{{pd.firstName}}</td>
+            <td>{{pd.lastName}}</td>
+            <td>{{pd.address}}</td>
+            <td>{{pd.phoneNumber}}</td>
+            <td>
+                <ngbd-modal-edit-component [userId]="pd.userId" [firstName]="pd.firstName" [lastName]="pd.lastName" [address]="pd.address" [phoneNumber]="pd.phoneNumber"></ngbd-modal-edit-component>
+            </td>
+            <td>
+                <ngbd-modal-component [userId]="pd.userId"></ngbd-modal-component>
+            </td>
+        </tr>
+    </tbody>
+</table>

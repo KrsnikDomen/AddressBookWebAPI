@@ -1,0 +1,50 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Edit user</h4>
+    <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
+      <span>&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+  <input type="hidden" name="UserId" [value]="this.service.formData.UserId">
+  <div class="form-row">
+      <div class="form-group col-md-6">
+          <div class="input-group">
+              <div class="input-group-prepend">
+                  <div class="input-group-text">
+                      <i class="las la-user-circle"></i>
+                  </div>
+              </div>
+              <input [value]="this.firstName" class="form-control" name="FirstName" placeholder="Name" required minlength="1">
+          </div>
+      </div>
+      <div class="form-group col-md-6">
+          <div class="input-group">
+              <input [value]="this.service.formData.LastName" class="form-control" name="LastName" placeholder="Surname" required minlength="1">
+          </div>
+      </div>
+  </div>
+  <div class="form-group">
+      <div class="input-group">
+          <div class="input-group-prepend">
+              <div class="input-group-text">
+                  <i class="las la-home"></i>
+              </div>
+          </div>
+          <input [value]="this.service.formData.Address" class="form-control" name="Address" placeholder="Address" required minlength="1">
+      </div>
+  </div>
+  <div class="form-group">
+      <div class="input-group">
+          <div class="input-group-prepend">
+              <div class="input-group-text">
+                  <i class="las la-phone"></i>
+              </div>
+          </div>
+          <input [value]="this.service.formData.PhoneNumber" placeholder="Phone number" name="PhoneNumber" class="form-control" required minlength="1">
+      </div>
+  </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" ngbAutofocus class="btn btn-outline-secondary" (click)="modal.dismiss('cancel click')">Cancel</button>
+    <button type="button" class="btn btn-success" (click)="modal.dismiss('person details updated');">Update</button>
+  </div>
