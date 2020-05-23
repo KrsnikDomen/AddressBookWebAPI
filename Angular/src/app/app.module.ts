@@ -11,7 +11,6 @@ import { PersonDetailListComponent } from './address-book/person-detail-list/per
 import { PersonDetailService } from './shared/person-detail.service';
 import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { NgbdModalContent, NgbdModalComponent } from './address-book/person-detail-list/modal-delete.component';
-import { NgbdModalConfirmAutofocus, NgbdModalFocus } from './address-book/person-detail-list/modal-edit.component';
 import { SearchComponent } from './address-book/search.component';
 import { PersonSearchType } from './shared/person-detail.model';
 import { EditPersonComponent } from './address-book/person-detail-list/modal-edit-user.component';
@@ -24,7 +23,6 @@ import { EditPersonComponent } from './address-book/person-detail-list/modal-edi
     PersonDetailListComponent,
     NgbdModalContent,
     NgbdModalComponent,
-    NgbdModalConfirmAutofocus,
     SearchComponent,
     EditPersonComponent
   ],
