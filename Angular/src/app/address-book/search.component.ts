@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { PersonDetailService } from '../shared/person-detail.service';
 import { PersonSearchType } from '../shared/person-detail.model';
 
@@ -8,6 +8,8 @@ import { PersonSearchType } from '../shared/person-detail.model';
   styleUrls: []
 })
 export class SearchComponent implements OnInit {
+  @Input()
+  FirstName: string;
 
   constructor(public service: PersonDetailService) {
   }
